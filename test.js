@@ -74,7 +74,7 @@ test('it filters a pullable source', t => {
   }
 
   const source = makeSource();
-  const filtered = filter(x => x % 2 === 1)(source);
+  const filtered = filter(async x => await (x % 2 === 1))(source);
   const sink = makeSink();
   filtered(0, sink);
 
@@ -142,7 +142,7 @@ test('it filters an async finite listenable source', t => {
   }
 
   const source = makeSource();
-  const filtered = filter(x => x % 2 === 1)(source);
+  const filtered = filter(x => new Promise((resolve, reject) => resolve(x % 2 === 1)))(source);
   filtered(0, sink);
 
   setTimeout(() => {
@@ -206,7 +206,7 @@ test('it returns a source that disposes upon upwards END', t => {
   }
 
   const source = makeSource();
-  const filtered = filter(x => x % 2 === 1)(source);
+  const filtered = filter(async x => {return await x % 2 === 1})(source);
   const sink = makeSink();
   filtered(0, sink);
 

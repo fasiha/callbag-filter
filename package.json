@@ -1,10 +1,10 @@
 {
-  "name": "callbag-filter",
+  "name": "callbag-filter-promise",
   "version": "1.0.1",
   "description": "Callbag operator that conditionally lets data pass through",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/staltz/callbag-filter.git"
+    "url": "git+https://github.com/fasiha/callbag-filter-promise.git"
   },
   "main": "readme.js",
   "scripts": {
