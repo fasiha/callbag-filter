@@ -1,6 +1,6 @@
 {
   "name": "callbag-filter-promise",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Callbag operator that conditionally lets data pass through",
   "repository": {
     "type": "git",
